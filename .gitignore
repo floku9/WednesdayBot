@@ -1,0 +1,5 @@
+.idea/
+Init/__pycache__/
+Database/__pycache__/
+__pycache__/
+Init/config.ini

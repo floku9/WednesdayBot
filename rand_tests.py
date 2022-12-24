@@ -1,8 +1,11 @@
 from bot_core import BotCore
-import Database.core as db_core
+from Database.core import *
 
-session = db_core.LocalSession()
+session = Session()
 core = BotCore(session)
 
-core.add_new_user("12345")
+req_user = session.query(User).join(Role).filter_by(telegram_id='12314123123').first()
+req_user.role.do_smth()
+print('a')
+
 
